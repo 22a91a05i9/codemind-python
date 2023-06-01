@@ -1,19 +1,19 @@
-a=int(input())
-b=int(input())
-for i in range(a,b+1):
-    v=i
-    j=i
-    s=0
-    count=0
-    while(i>0):
-        s=i%10
-        count=count+1
-        i=i//10
-        c=0
-    while j>0:
-        r=j%10
-        if(r!=0 and v%r==0):
-            c=c+1
-        j=j//10
-    if(count==c):
-        print(v,end=" ")
+n=int(input())
+m=int(input())
+def is_fun(s):
+    c=0
+    l=0
+    t=s
+    while(s!=0):
+        d=s%10
+        s=s//10
+        c+=1
+        if(d!=0 and t%d==0):
+            l+=1
+    if(c==l):
+        return 1
+    else:
+        return 0
+for i in range(n,m+1):
+    if(is_fun(i)):
+        print(i,end=" ")
