@@ -1,17 +1,17 @@
 n=int(input())
-l=[]
-for i in range(1,(n//2)+1):
-    for j in range(2,int((i**0.5)+1)):
-        if(i%j==0):
-            break
-    else:
-        l.append(i)
-c=0        
-for i in range(0,len(l)):
-    for j in range(i,len(l)):
-        if(l[i]*l[j]==n):
-            c=c+1
-            print(l[i],l[j])
-            break
-if(c==0):
-    print(-1)
+c=0
+for i in range(1,n+1):
+    for j in range(2,n+1):
+        for k in range(2,n+1):
+            if(i%j!=0 and i%k!=0):
+                if(j*k==n):
+                    p=j;
+                    q=k;
+                    c+=1
+                    break;
+if(c!=0):
+    print(q,p)
+else:
+    print("-1")
+
+
