@@ -4,12 +4,12 @@ sum=0
 rev=0
 dc=0
 while(n!=0):
-    d=n%10;
-    n=n//10;
+    d=n%10
+    n=n//10
     rev=rev*10+d
 while(rev!=0):
-    d=rev%10;
-    rev=rev//10;
+    d=rev%10
+    rev=rev//10
     dc=dc+1
     dc**d
     sum=sum+d**dc
@@ -17,3 +17,4 @@ if(sum==temp):
     print("True")
 else:
     print("False")
+
